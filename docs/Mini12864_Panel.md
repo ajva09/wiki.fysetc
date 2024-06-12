@@ -3,23 +3,23 @@
 
 ![Mini12864](images/Mini12864.png)
 
-This is a opensouce, cheap, with RGB indicator, common to marlin's display, supports offline printing, resolution is 12864, display area is 2.4'', SD card holder can be side or vertical, convenient for different installation occasions Ideal for small 3D printers.
+The Fysetc Mini 12864 is a Klipper/Marlin compatible open source display. It features an RGB indicator, offline printing capability, a 128x64 resolution 2.4'' screen, a SD card holder, and a compact size convenient for installation.
 
-There are three versions：
+There are three versions available：
 
-V1.2 with  two RGB LEDs around the encoder, the back-light is fixed color.
+V1.2 with two RGB LEDs around the encoder and a fixed-color backlight.
 
-V2.0 with  two RGB LEDs around the encoder，the  back-light is  RGB  and controlled by 3 pwm pins.
+V2.0 with two RGB LEDs around the encoder and a RGB back-light controlled by 3 pwm pins.
 
-V2.1 with  two RGB LEDs around the encoder，the  back-light is  RGB  and controlled by 3 WS2811 chips, same as the NEOPIXEL_LED.
+V2.1 with two RGB LEDs around the encoder and a RGB back-light controlled by 3 WS2811 chips which is same used in neoxpixels.
 
 ## Features
 
-- 2.4" inch high contrast Graphic LCD
-- Black-gray/black-green/white-black/white-blue/green-black, 5 display styles
+- 2.4" inch high contrast graphic LCD
+- Black-gray/black-green/white-black/white-blue/green-black display styles
 - SPI communication to host micro-controller
-- Support Vertical or side SD slot with card detect,with a optional  SD module
-- Rotary Encoder with RGB-Aura
+- Support Vertical or side SD slot with SD card detection, with an optional  SD module
+- Rotary Encoder with RGB
 - Configurable RGB LED light
 - Software configurable contrast setting
 - 3D printable case and mount STL file 
@@ -29,7 +29,7 @@ V2.1 with  two RGB LEDs around the encoder，the  back-light is  RGB  and contro
 
 ## Application
 
-3D printer，CNC machines ，Other micro controller projects
+3D printer，Voron, CNC machines，and other ther micro controller projects
 
 
 
@@ -48,11 +48,11 @@ V2.1 with  two RGB LEDs around the encoder，the  back-light is  RGB  and contro
 
 ## Firmware config
 
-This screen driver is ST7567 and is compatible with the marlin Mini panel (UC1701,same as ST7567). It has been tested well, and the following configuration is required.
+The screen driver is a ST7567 and is compatible with the marlin Mini panel (UC1701,same as ST7567). It has been tested well, and the following configuration is required.
 
 **Before you start, please install the latest version of U8glib.**
 
-### Step1. changes the pins.
+### Step1. change the pins.
 
 On a RAMPS-compatible board, you need to make the following changes in pins_RAMPS.h:
 ```
@@ -142,7 +142,7 @@ Add  "u8g.setContrast(255);" in the "static void lcd_implementation_init()" func
 
 ## Optional Hardware module:
 
-The SD card of mini12864 can be  set on the side or in the front,  which requires a module to implement. As shown below:
+The SD card of mini12864 can be  set on the side or in the front,  which requires a module as shown below:
 
 ![mini12864_SD1](images/mini12864_SD1.png)
 
