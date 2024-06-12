@@ -2,17 +2,17 @@
 
 ## 1. Introduction
 
-The SB CAN Tool Board is a highly integrated printhead control board. Based on STM32F072, running Klipper firmware. Onboard TMC2209 stepper motor driver, AXL345 acceleration sensor, and other necessary interfaces. And comes with a 2.5m 4-core cable for easy out-of-the-box use.
+The SB CAN Toolhead Board is a Stealthburner integrated printhead control board. It is based on the STM32F072 chip, running Klipper firmware. It features an onboard TMC2209 stepper driver for the extruder, an ADXL345 acceleration sensor for input shaping, and other necessary interfaces. It also comes with a premade 2.5m 4-core CAN cable for easy out-of-the-box use.
 
-### 1.1 Feature
+### 1.1 Features
 
-- Based on STM32F072
+- Based on the STM32F072 chip
 
 - Onboard 1M CAN transceiver
 
-- Onboard TMC2209
-
-- 2x 0.5A MAX PWM interface for controllable fan (default VIN power supply, 5V optional)
+- Onboard TMC2209 stepper driver for the extruder
+  
+- 2x 0.5A MAX PWM interface for controllable fans (default VIN power supply, 5V optional)
 
 - 1x signal input interface (VIN power supply, with level conversion)
 
@@ -20,31 +20,31 @@ The SB CAN Tool Board is a highly integrated printhead control board. Based on S
 
 - 1X 5V single wire RGB interface (1A MAX)
 
-- 1x 4A MAX PWM output for heating rod
+- 1x 4A MAX PWM output for hotend heater cartridge
 
-- 1x ADC interface for heating rod temperature acquisition
+- 1x ADC interface for hotend thermistor
 
 - MX3.0 2X2 interface for power and CAN signal access
 
 - 1x Micro USB for firmware uploading
 
-- Comes with 2.5m 4-core cable, 2x16AWG+2x24AWG
+- Comes with premade 2.5m 4-core CAN cable, 2x16AWG+2x24AWG
 
-- Comes with terminal housing and wire crimping tabs
+- Comes with terminal housing and JST-PH2.0 connectors
 
 ## 2. Hardware Guide
 
 ### 2.1 Install
 
-Before you install the board, you need printed parts [here](https://github.com/FYSETC/FYSETC_SB_CAN_TOOLHEAD/tree/main/STLs). Then follow the 5 steps below.
+Before you install the board, you need the printed parts [here](https://github.com/FYSETC/FYSETC_SB_CAN_TOOLHEAD/tree/main/STLs). Then follow the 5 steps below.
 
-![SB CAN ToolHead](assets\SB%20CAN%20ToolHead_Install.png)
+![SB CAN ToolHead](assets/SB%20CAN%20ToolHead_Install.png)
 
-1. You Stealburner should have to holes with heat inserts on.
+1. Insert the m3 heat set inserts into the side of the CW2.
 2. 3D Print the [pcb_spacer.STL](https://github.com/FYSETC/FYSETC_SB_CAN_TOOLHEAD/blob/main/STLs/pcb_spacer.STL "pcb_spacer.STL") 
 3. Place the PCB on the position
 4. Screw it to printed head and pcb_spacer.STL
-5. Follow the chapter `2.2 wiring` to connect the peripherals and cover the lid.
+5. Follow the chapter labeled `2.2 wiring` to connect the peripherals and cover the lid.
 
 ### 2.2 Connectors
 
@@ -111,7 +111,7 @@ There is Micro-USB port on the board for firmware upload. Follow the sequence be
 
 2. Plug in SB-CAN-TH board 24v socket to the machine PSU
 
-3. Power on your raspberrypi (Or other SBC) and wait it boot ready.
+3. Power on your Raspberry Pi (Or other SBC) and wait for it to boot.
 
 4. Power on the 24v PSU for SB-CAN-TH board 
 
